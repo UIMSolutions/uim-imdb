@@ -1,5 +1,8 @@
 module uim.imdb;
 
+import std.stdio;
+import std.string;
+
 enum Relation : string {
 	None = "0",
 	EmbeddedOne = "1",
@@ -19,4 +22,7 @@ Relation toRelation(string nameOfRelation) {
 		case "M-M": return Relation.ManyToMany;
 		default: return Relation.None;
 	}
+}
+string toString(Relation relation) {
+	return "%s".format(relation);
 }
