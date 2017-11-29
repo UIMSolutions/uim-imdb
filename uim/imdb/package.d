@@ -3,6 +3,7 @@ module uim.imdb;
 import std.stdio;
 import std.string;
 
+/// Relations between Entities
 enum Relation : string {
 	None = "0",
 	EmbeddedOne = "1",
@@ -12,6 +13,8 @@ enum Relation : string {
 	ManyToOne = "M-1",
 	ManyToMany = "M-M"
 }
+
+/// Convert String to Relation
 Relation toRelation(string nameOfRelation) {
 	switch (nameOfRelation) {
 		case "1": return Relation.EmbeddedOne;
@@ -23,6 +26,8 @@ Relation toRelation(string nameOfRelation) {
 		default: return Relation.None;
 	}
 }
+
+/// Convert Relation to String
 string toString(Relation relation) {
 	return "%s".format(relation);
 }
