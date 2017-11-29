@@ -17,6 +17,6 @@ Relation toRelation(string nameOfRelation) {
 		case "1-M": return Relation.OneToMany;
 		case "M-1": return Relation.ManyToOne;
 		case "M-M": return Relation.ManyToMany;
-	default: return Relation.None;
+		default: return Relation.None;
 	}
 }
