@@ -1,1 +1,1 @@
-package uim.imdb;
+module uim.imdb;
